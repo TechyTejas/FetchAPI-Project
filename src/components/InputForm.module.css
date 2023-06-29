@@ -1,0 +1,32 @@
+.main{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+
+.input_text{
+    width: 350px;
+    border-radius: 10px;
+    height: 25px;
+}
+
+.input{
+    width: 350px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.btn{
+    cursor: pointer;
+  background: #230052;
+  border: 1px solid #230052;
+  color: white;
+  padding: 0.50rem 2rem;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.label{
+    text-align: right;
+  margin-left: 0;
+}
