@@ -7,12 +7,10 @@ import './App.css';
 function App() {
   const[movies,setMovies]=useState([])
 
- function fetchMovieHandler() {
-  fetch('https://swapi.dev/api/films/')
-  .then((response)=>{
-    return response.json();
-  })
-  .then((data) => {
+ async function fetchMovieHandler() {
+ const response= await fetch('https://swapi.dev/api/films/')
+ const data= await response.json();
+  
     //this step is to transformed upcoming data into that keyformat in which we alloted
     const trasformedMovies = data.results.map(movieData => {
       return {
@@ -23,7 +21,7 @@ function App() {
       };
     });
    setMovies(trasformedMovies);
-  })
+  
  }
 
   return (
