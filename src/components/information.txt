@@ -46,3 +46,17 @@ This means that JavaScript code execution continues without waiting for the resp
 If we wrote const response = fetch(url) without any additional code, the response would not be immediately
 available.
 
+
+What do 4XX responses mean? Explain a few of them.
+What do 5XX responses mean? Explain a few of them.
+
+4XX Responses:
+400 Bad Request: The server cannot understand the client's request due to malformed syntax or invalid parameters.
+401 Unauthorized: The client needs to provide valid authentication credentials to access the requested resource.
+403 Forbidden: The server understands the request but refuses to fulfill it. The client does not have the necessary permissions.
+404 Not Found: The requested resource could not be found on the server.
+
+5XX Responses:
+500 Internal Server Error: A generic error message indicating that an unexpected condition occurred on the server.
+502 Bad Gateway: The server acting as a gateway received an invalid response from an upstream server.
+503 Service Unavailable: The server is temporarily unable to handle the request, usually due to being overloaded or undergoing maintenance.
