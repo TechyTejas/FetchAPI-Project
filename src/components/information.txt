@@ -1,0 +1,48 @@
+What is default method type of fetch Api ->GET or POST
+When I do fetch('https://swapi.dve/api/films') what is the default method type here?
+What is json? Why do we do response.json() ?
+What does fetch() return? Why do we need to use 'then'?
+Why cant we simply write const response. = fetch(url)
+
+If we connect databases from frontend itself we have to write code for it,
+this will show our database information to users ,and service takers by inspecting it.
+So this can lead to information leakage.
+The solution to this is to use backend language where we keep our all logic and 
+request to database and connect it with our frontend part so the problem can never be occur.
+
+1)
+The default method type for the Fetch API is GET. When we use the fetch() function
+ without specifying the method type, it assumes a GET request by default.
+
+2)
+In example, the fetch('https://swapi.dev/api/films') call is using the GET method to
+ retrieve data from the specified URL.
+
+3)
+JSON stands for JavaScript Object Notation. It is a lightweight data format used for
+storing and exchanging data between a server and a client (such as a web browser).
+It is easy for both humans and machines to read and write.
+So, when we do response.json(), we are essentially converting the raw response data
+into a object format that we can work with conveniently in JavaScript.
+
+4)
+When we make a request to a server using the Fetch API, the fetch() function returns
+a Promise. A Promise is an object that represents a value that may be available now
+or in the future. In the case of fetch(), the Promise represents the eventual completion
+ or failure of the network request.
+So, when we call fetch('https://example.com/api/data'), we receive a Promise as the
+return value. This Promise will resolve with a Response object once the network request
+is complete.
+Now, why do we need to use 'then'? 'then' is a method that allows us to handle the result
+of a Promise. It takes a callback function as an argument, which will be executed when the
+Promise is resolved.
+In the context of fetch(), we use 'then' to handle the Response object returned by the Promise.
+So, by using 'then', we can handle the asynchronous nature of the fetch() function
+and perform actions on the resolved Response object and the extracted data in a structured and sequential manner.
+
+5)
+When we make a request using the Fetch API, the network request is typically asynchronous.
+This means that JavaScript code execution continues without waiting for the response to arrive.
+If we wrote const response = fetch(url) without any additional code, the response would not be immediately
+available.
+
