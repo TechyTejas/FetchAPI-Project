@@ -1,5 +1,5 @@
 //we have used swapi 
-import React,{useState} from 'react';
+import React,{useState,useEffect,useCallback} from 'react';
 
 import MoviesList from './components/MoviesList';
 import './App.css';
@@ -9,7 +9,7 @@ function App() {
   const[loading,setLoading]=useState(false)
   const[error,setError]=useState(null)
 
- async function fetchMovieHandler() {
+ const fetchMovieHandler = useCallback(async () => {
   setLoading(true)
   setError(null)
   try{
@@ -36,6 +36,11 @@ function App() {
   }
   setLoading(false)
  }
+)
+
+ useEffect(()=>{
+  fetchMovieHandler();
+ },[])
 
  let content=<p><h3>Found no Movies</h3></p>
 
